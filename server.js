@@ -26,6 +26,8 @@ app.post("/AddQuestion", (req, res) => {
   que.Que = req.body.Que;
   que.Author = req.body.Author;
   que.status = req.body.status;
+  que.Topic = req.body.Topic;
+  que.Cnt = req.body.Cnt;
   que
     .save()
     .then((result) => {
@@ -37,10 +39,12 @@ app.post("/AddQuestion", (req, res) => {
 });
 
 app.post("/AddAnswer", (req, res) => {
+  //done
   const ans = new Answer();
   ans.id = req.body.id;
   ans.Author = req.body.Author;
   ans.Comment = req.body.Comment;
+  ans.status = req.body.status;
   ans
     .save()
     .then((result) => {
@@ -72,12 +76,14 @@ app.post("/AddProject", async (req, res) => {
 });
 
 app.get("/GetQuestion", (req, res) => {
+  //done
   Question.find()
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
 });
 
 app.get("/GetAnswer", (req, res) => {
+  //done
   Answer.find()
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
