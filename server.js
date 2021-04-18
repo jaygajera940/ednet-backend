@@ -53,7 +53,7 @@ app.post("/AddAnswer", (req, res) => {
 
 app.post("/AddProject", async (req, res) => {
   // done
-  console.log(req.body);
+
   const pro = new Project();
   //   pro.id = req.body.id;
   pro.Author = req.body.Author;

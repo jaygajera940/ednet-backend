@@ -1,9 +1,10 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const AnswerSchema = new mongoose.Schema({
-    id:{type:Number},
-    Author:{type:String},
-    Comment:{type:String}
+  id: { type: Number },
+  Author: { type: String },
+  Comment: { type: String },
+  status: { type: String },
 });
 
 module.exports = mongoose.model("Answer", AnswerSchema);
