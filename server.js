@@ -57,7 +57,7 @@ app.post("/AddAnswer", (req, res) => {
 
 app.post("/AddProject", async (req, res) => {
   // done
-
+  console.log(req.body);
   const pro = new Project();
   //   pro.id = req.body.id;
   pro.Author = req.body.Author;
@@ -67,7 +67,7 @@ app.post("/AddProject", async (req, res) => {
   await pro
     .save()
     .then((result) => {
-      console.log("result", result);
+      console.log("result", result, "body", req.body);
       res.send(result);
     })
     .catch((err) => {
