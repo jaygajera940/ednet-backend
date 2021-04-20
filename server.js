@@ -37,15 +37,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.get("/",(req,res)=>{
-    const response = {
-        ok:true,
-        data:{
-            msg:"Naive-Baker Backend here!😀"   
-        },
-        err:{    
-        }
-    }
-    res.send(response);
+   
+    res.send("hey welcome to ednet backend 😊😊");
 });
 // --------------------------------vismay end point-------------------------------------------------------
 
