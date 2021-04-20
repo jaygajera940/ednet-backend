@@ -288,6 +288,7 @@ app.post("/api/register", async (req, res) => {
   //res.redirect("/api/profile")
 });
 
-app.listen(9999, () => {
+var port_number = server.listen(process.env.PORT_NO || 3000);
+app.listen(port_number, () => {
   console.log("Server up at 9999");
 });
