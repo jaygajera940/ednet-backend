@@ -7,8 +7,8 @@ const UserSchema = new mongoose.Schema(
 		firstname: { type: String, required: true },
 		lastname: { type: String, required: true },
 		admincode:{ type: String },
-		isAdmin: { type: boolean, default :false },
-		isProf: { type: boolean, default :false },
+		isAdmin: { type: Boolean, default :false },
+		isProf: { type: Boolean, default :false },
 		profile : {type:Buffer},
 		area_interest:{type:Array}
 	},
