@@ -185,7 +185,7 @@ app.post("/api/login", async (req, res) => {
   const user = await User.findOne({ email }).lean();
 
   if (!user) {
-    return res.json({ status: "error", error: "Invalid email/password" });
+    return res.json({ status: "e1", error: "Invalid email/password" });
   }
 
   if (await bcrypt.compare(password, user.password)) {
@@ -230,7 +230,7 @@ app.post("/api/register", async (req, res) => {
   console.log(req.body);
 
   if (!email || typeof email !== "string") {
-    return res.json({ status: "error", error: "Invalid email" });
+    return res.json({ status: "e1", error: "Invalid email" });
   }
 
   /*if(req.body.admincde === 'John Reese'){
