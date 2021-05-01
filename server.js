@@ -288,7 +288,7 @@ app.post("/api/register", async (req, res) => {
   }
 
   //res.json({ status: 'ok' })
-  return res.status(200).json({ token: token, user_id: user._id });
+  return res.status(200).json({ token: token, user_id: user._id ,status:"ok"});
   //res.redirect("/api/profile")
 });
 
