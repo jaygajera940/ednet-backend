@@ -266,7 +266,7 @@ app.post("/api/register", async (req, res) => {
       lastname: req.body.lastname,
       area_interest: arr,
     });
-
+	response.isAdmin = req.body.Status;
     if (req.body.admincode === "John Reese") {
       response.isAdmin = true;
     }
